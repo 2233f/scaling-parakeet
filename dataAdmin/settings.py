@@ -78,11 +78,11 @@ WSGI_APPLICATION = "dataAdmin.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "dataAdmin",
-        "USRE": 'root',
-        "password": "202231604115www",
-        'host': "127.0.0.1",
-        "post": 3306
+        "NAME": "dataadmin",
+        "USER": 'root',
+        "PASSWORD": "202231604115www",
+        'HOST': "localhost",
+        "POST": 3306
     }
 }
 
@@ -122,6 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR,'css'),
+    os.path.join(BASE_DIR,'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
